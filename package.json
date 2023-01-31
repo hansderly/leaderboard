@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/hansderly/leaderboard/issues"
   },
-  "homepage": "https://github.com/hansderly/leaderboard#readme"
+  "homepage": "https://github.com/hansderly/leaderboard#readme",
+  "devDependencies": {
+    "hint": "^7.1.3"
+  }
 }
