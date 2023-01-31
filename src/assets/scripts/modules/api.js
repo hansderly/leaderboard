@@ -18,7 +18,13 @@ const addScore = async (user, score) => {
   }
 };
 
-const getScores = () => {
+const getScores = async () => {
+  try {
+    const { data, status } = await axios.get(baseURL);
+    return { status, data };
+  } catch (error) {
+    return error;
+  }
 };
 
 export { addScore, getScores };

@@ -30,7 +30,6 @@ li:nth-child(even) {
 .board {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .board-head {

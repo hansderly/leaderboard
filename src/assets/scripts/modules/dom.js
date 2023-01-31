@@ -24,4 +24,18 @@ form.addEventListener('submit', (e) => {
   form.reset();
 });
 
-refreshBtn.addEventListener('click', () => getScores());
+const refresh = async () => {
+  const { status, data } = await getScores();
+  if (status !== 200) return null;
+
+  const leadList = document.querySelector('.leadList');
+  const fragment = document.createDocumentFragment();
+  data.result.forEach((el) => {
+    const lead = document.createElement('li');
+    lead.innerText = `${el.user}: ${el.score}`;
+    fragment.appendChild(lead);
+  });
+  return leadList.appendChild(fragment);
+};
+
+refreshBtn.addEventListener('click', () => refresh());
