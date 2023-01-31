@@ -18,21 +18,19 @@
         <div class="board-table">
           <div class="board-head">
             <h2>Recent Scores</h2>
-            <button>Refresh</button>
+            <button id="refreshBtn">Refresh</button>
           </div>
-          <ul>
-            <li>Name: 1</li>
-            <li>Name: 2</li>
+          <ul class="leadList">
           </ul>
         </div>
         <div class="add-score">
           <h2>Add your core</h2>
           <form id="form">
             <div>
-              <input type="text" name="" id="">
+              <input required type="text" name="username" id="username">
             </div>
             <div>
-              <input type="text" name="" id="">
+              <input required type="number" name="score" id="score">
             </div>
             <button>submit</button>
           </form>
