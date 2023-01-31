@@ -11,13 +11,14 @@ const config = {
 const addScore = async (user, score) => {
   const dataPost = JSON.stringify({ user, score });
   try {
-    const { data } = await axios.post(baseURL, dataPost, config);
-    return data;
+    const { data, status } = await axios.post(baseURL, dataPost, config);
+    return { status, data };
   } catch (error) {
     return error;
   }
 };
 
-const getScores = () => {};
+const getScores = () => {
+};
 
 export { addScore, getScores };
