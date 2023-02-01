@@ -83,6 +83,10 @@ li:nth-child(even) {
   font-weight: 800;
 }
 
+.add-score {
+  width: 250px;
+}
+
 form:last-child {
   align-self: flex-end;
 }

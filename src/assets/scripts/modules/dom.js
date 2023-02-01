@@ -8,7 +8,7 @@ const { username, score } = form.elements;
 const createHtml = (user, score) => (`
    <span class="big">1</span>
       <div class="img-name">
-        <img class="avatar" src="https://xsgames.co/randomusers/avatar.php?g=female" alt="avatar">
+        <img class="avatar" src="https://api.lorem.space/image/face?w=40&h=40" alt="avatar">
         <span>${user}</span>
       </div>
     <span class="big">${score} pts</span>
