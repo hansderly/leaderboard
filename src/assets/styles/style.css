@@ -4,6 +4,7 @@
 
 body {
   background-color: aliceblue;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 header {
@@ -20,7 +21,7 @@ li:nth-child(even) {
 }
 
 .container {
-  max-width: 700px;
+  max-width: 750px;
   margin-inline: auto;
   background-color: #fff;
   border-radius: 15px;
@@ -34,6 +35,56 @@ li:nth-child(even) {
 
 .board-head {
   display: flex;
+  background-color: #fff;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.board-container {
+  flex: 2;
+}
+
+.board-table {
+  overflow: scroll;
+  max-height: 500px;
+}
+
+.board-table::-webkit-scrollbar {
+  display: none;
+}
+
+.leadList {
+  margin-top: 25px;
+}
+
+.leadList > li {
+  display: flex;
+  padding: 15px 15px;
+  background-color: antiquewhite;
+  border-radius: 15px;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.img-name {
+  display: flex;
+  flex: 2;
+  margin-left: 15px;
+  align-items: center;
+}
+
+.avatar {
+  width: 40px;
+  border-radius: 15px;
+  margin-right: 15px;
+}
+
+.big {
+  font-weight: 800;
+}
+
+.add-score {
+  width: 250px;
 }
 
 form:last-child {
