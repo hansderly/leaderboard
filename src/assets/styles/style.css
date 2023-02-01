@@ -21,23 +21,35 @@ li:nth-child(even) {
 }
 
 .container {
-  max-width: 750px;
+  max-width: 800px;
   margin-inline: auto;
   background-color: #fff;
   border-radius: 15px;
   padding: 15px;
+  box-shadow: 0 11px 75px -3px rgba(0, 0, 0, 0.10);
+  -webkit-box-shadow: 0 11px 75px -3px rgba(0, 0, 0, 0.10);
+  -moz-box-shadow: 0 11px 75px -3px rgba(0, 0, 0, 0.10);
 }
 
 .board {
   display: flex;
   justify-content: space-between;
+  gap: 15px;
 }
 
 .board-head {
   display: flex;
+  justify-content: space-between;
   background-color: #fff;
   padding: 10px;
-  justify-content: space-between;
+}
+
+#refreshBtn {
+  padding: 5px 30px;
+  border-radius: 10px;
+  border: 1px solid rgb(255, 192, 74);
+  color: rgb(255, 192, 74);
+  background-color: antiquewhite;
 }
 
 .board-container {
@@ -60,7 +72,7 @@ li:nth-child(even) {
 .leadList > li {
   display: flex;
   padding: 15px 15px;
-  background-color: antiquewhite;
+  background-color: rgb(255, 244, 228);
   border-radius: 15px;
   align-items: center;
   margin: 15px 0;
@@ -84,9 +96,34 @@ li:nth-child(even) {
 }
 
 .add-score {
-  width: 250px;
+  width: 300px;
 }
 
-form:last-child {
-  align-self: flex-end;
+.add-score > h2 {
+  margin: 12px 0 35px 0;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 8px;
+}
+
+form button {
+  padding: 15px 30px;
+  border-radius: 15px;
+  border: 1px solid rgb(255, 192, 74);
+  color: rgb(255, 192, 74);
+  background-color: antiquewhite;
+}
+
+form > div {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 90%;
+  padding: 17px 10px;
+  border-radius: 15px;
+  border: 1px solid gray;
 }
