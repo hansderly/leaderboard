@@ -5,9 +5,18 @@ const refreshBtn = document.querySelector('#refreshBtn');
 
 const { username, score } = form.elements;
 
+const createHtml = (user, score) => (`
+   <span class="big">1</span>
+      <div class="img-name">
+        <img class="avatar" src="https://xsgames.co/randomusers/avatar.php?g=female" alt="avatar">
+        <span>${user}</span>
+      </div>
+    <span class="big">${score} pts</span>
+  `);
+
 const addToDOM = (user, score) => {
   const newlead = document.createElement('li');
-  newlead.innerText = `${user}: ${score}`;
+  newlead.innerHTML = createHtml(user, score);
   document.querySelector('.leadList').appendChild(newlead);
 };
 
@@ -30,9 +39,10 @@ const refresh = async () => {
 
   const leadList = document.querySelector('.leadList');
   const fragment = document.createDocumentFragment();
+  leadList.innerHTML = '';
   data.result.forEach((el) => {
     const lead = document.createElement('li');
-    lead.innerText = `${el.user}: ${el.score}`;
+    lead.innerHTML = createHtml(el.user, el.score);
     fragment.appendChild(lead);
   });
   return leadList.appendChild(fragment);
