@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const id = 'UbAs6MKSMlOhiBPbmRvp';
+const id = '2AWq5aBevBN0hSte2b4S';
 const baseURL = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${id}/scores`;
 const config = {
   headers: {
