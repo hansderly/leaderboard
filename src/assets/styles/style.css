@@ -44,11 +44,19 @@ li:nth-child(even) {
   padding: 10px;
 }
 
+.board-head > h2 {
+  color: #3D2900;
+}
+
+header > h1 {
+  color: #3D2900;
+}
+
 #refreshBtn {
   padding: 5px 30px;
   border-radius: 10px;
   border: 1px solid rgb(255, 192, 74);
-  color: rgb(255, 192, 74);
+  color: rgb(255, 166, 0);
   background-color: antiquewhite;
 }
 
@@ -101,6 +109,7 @@ li:nth-child(even) {
 
 .add-score > h2 {
   margin: 12px 0 35px 0;
+  color: #3D2900;
 }
 
 .buttonContainer {
@@ -113,7 +122,7 @@ form button {
   padding: 15px 30px;
   border-radius: 15px;
   border: 1px solid rgb(255, 192, 74);
-  color: rgb(255, 192, 74);
+  color: rgb(255, 166, 0);
   background-color: antiquewhite;
 }
 
@@ -125,5 +134,14 @@ input {
   width: 90%;
   padding: 17px 10px;
   border-radius: 15px;
-  border: 1px solid gray;
+  border: 1px solid rgb(255, 192, 74);
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid rgb(255, 166, 0);
+}
+
+::placeholder {
+  font-style: italic;
 }

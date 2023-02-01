@@ -5,18 +5,19 @@ const refreshBtn = document.querySelector('#refreshBtn');
 
 const { username, score } = form.elements;
 
-const createHtml = (user, score) => (`
-   <span class="big">1</span>
+const createHtml = (id, user, score) => (`
+   <span class="big">${typeof id === 'number' ? id + 1 : ''}</span>
       <div class="img-name">
-        <img class="avatar" src="https://api.lorem.space/image/face?w=40&h=40" alt="avatar">
+        <img class="avatar" src="https://static.vecteezy.com/system/resources/thumbnails/005/129/844/small/profile-user-icon-isolated-on-white-background-eps10-free-vector.jpg" alt="avatar">
         <span>${user}</span>
       </div>
     <span class="big">${score} pts</span>
   `);
 
 const addToDOM = (user, score) => {
+  console.log(user, score)
   const newlead = document.createElement('li');
-  newlead.innerHTML = createHtml(user, score);
+  newlead.innerHTML = createHtml('', user, score);
   document.querySelector('.leadList').appendChild(newlead);
 };
 
@@ -37,12 +38,14 @@ const refresh = async () => {
   const { status, data } = await getScores();
   if (status !== 200) return null;
 
+  data.result = data.result.sort((a, b) => b.score - a.score);
+
   const leadList = document.querySelector('.leadList');
   const fragment = document.createDocumentFragment();
   leadList.innerHTML = '';
-  data.result.forEach((el) => {
+  data.result.forEach((el, id) => {
     const lead = document.createElement('li');
-    lead.innerHTML = createHtml(el.user, el.score);
+    lead.innerHTML = createHtml(id, el.user, el.score);
     fragment.appendChild(lead);
   });
   return leadList.appendChild(fragment);
