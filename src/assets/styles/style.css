@@ -26,9 +26,9 @@ li:nth-child(even) {
   background-color: #fff;
   border-radius: 15px;
   padding: 15px;
-  box-shadow: 0 11px 75px -3px rgba(0, 0, 0, 0.10);
-  -webkit-box-shadow: 0 11px 75px -3px rgba(0, 0, 0, 0.10);
-  -moz-box-shadow: 0 11px 75px -3px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 11px 75px -3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 11px 75px -3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 11px 75px -3px rgba(0, 0, 0, 0.1);
 }
 
 .board {
@@ -45,11 +45,11 @@ li:nth-child(even) {
 }
 
 .board-head > h2 {
-  color: #3D2900;
+  color: #3d2900;
 }
 
 header > h1 {
-  color: #3D2900;
+  color: #3d2900;
 }
 
 #refreshBtn {
@@ -109,7 +109,7 @@ header > h1 {
 
 .add-score > h2 {
   margin: 12px 0 35px 0;
-  color: #3D2900;
+  color: #3d2900;
 }
 
 .buttonContainer {
@@ -137,13 +137,13 @@ input {
   border: 1px solid rgb(255, 192, 74);
 }
 
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 input:focus {
   outline: none;
   border: 1px solid rgb(255, 166, 0);
-}
-
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
 }
 
 ::placeholder {
