@@ -15,7 +15,6 @@ const createHtml = (id, user, score) => (`
   `);
 
 const addToDOM = (user, score) => {
-  console.log(user, score)
   const newlead = document.createElement('li');
   newlead.innerHTML = createHtml('', user, score);
   document.querySelector('.leadList').appendChild(newlead);
